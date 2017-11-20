@@ -64,7 +64,7 @@ end
 end
 
 def won?(board)                                         # determines a win
-  WIN_COMBINATIONS.each do |win_combo|                  # checks the constant winning combinations
+  WIN_COMBINATIONS.any? do |win_combo|                  # checks the constant winning combinations
                                                         # to see if there is a match with whats on the board
     if board[win_combo[0]] == "X" && board[win_combo[1]] == "X" && board[win_combo[2]] == "X"
       return win_combo
